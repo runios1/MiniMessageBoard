@@ -1,0 +1,15 @@
+<h1>This is the home page!</h1>
+<div>
+  <%= title %>
+  <ul>
+    <% let id = 0; messages.map((message) => {%>
+    <li>
+      <p>
+        <%= message.user %> sent <%= message.text %> on <%= message.added %>
+      </p>
+      <a href="/message?id=<%= id++ %>">Open</a>
+    </li>
+    <% }) %>
+  </ul>
+  <a href="/new">Send a new message</a>
+</div>
